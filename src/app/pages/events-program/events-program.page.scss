@@ -1,0 +1,80 @@
+ion-content {
+    --background: url('../../../assets/image/blue_bg.png') 0 0/100% 100% no-repeat;
+
+    // .top {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     margin-top: 40px;
+    //     margin-left: 20px;
+    //     margin-right: 20px;
+    // }
+
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        margin-top: 25px;
+        padding-top: 30px;
+        padding: 20px;
+        padding-bottom: 50px;
+        height:auto;
+        min-height: calc(100% - 80px);
+
+        .cardData{
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            height: auto;
+            #subject{
+               // color: rgb(0, 0, 0);
+               // background-color: aliceblue;
+                padding: 5px;
+                border-radius: 10px;
+                font-weight: bold;
+            }
+
+            .box{
+                display: grid;
+                grid-template-columns: 25% 75%;
+                //padding-left: 10px;
+                padding-top: 10px;
+                justify-items: center;
+                grid-gap: 10px;
+            }
+            .thumbnail{
+                .img{
+                    width: 100%;
+                    border-radius: 10px;
+                    height: same-as-width;
+                    background-size: cover;
+                }
+            }
+            .description{
+                justify-self: start;
+                ion-icon{
+                    color:blue;
+                    
+                }
+                span{
+                    color:blue;
+                    margin-left: 4px;
+                }
+                .paragraph{
+                    text-align: justify;
+                    margin-right: 20px;
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+
+            }
+        }
+     
+    }
+
+}
+

@@ -1,0 +1,28 @@
+<app-modal-title-bar [title]="'Update Profile Name'"></app-modal-title-bar>
+<ion-content [fullscreen]="true">
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <div class="modal-container">
+          <h1>Tell us about yourself</h1>
+          <div class="fields-container">
+            <div class="ion-padding inner-inputs">
+              <ion-label>Tell us your name</ion-label>
+              <div class="input-field">
+                <ion-input type="text" [(ngModel)]="name" type="text" placeholder="Enter Your Name"></ion-input>
+              </div>
+            </div>
+          </div> 
+          <h4>Select your user category that best describes your Exiaa :</h4>
+          <div class="busines-category">
+            <ion-chip class="chip" [id]="userType.userTypeId" [color]="userTypeDefaultColor[i]" (click)="changeUserTypeColor(i)" *ngFor="let userType of userTypes; let i= index" (click)="selectUserType(userType)">
+              <ion-img *ngIf="userType.iconImageUrl" [src]="'assets/category/'+userType.iconImageUrl"></ion-img>
+              <!-- <app-avatar-round [imageUrl]="'assets/category/'+category.iconImageUrl" [size]="20"></app-avatar-round> -->
+              <ion-label>{{userType.userType}}</ion-label>
+            </ion-chip>
+          </div>
+      </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

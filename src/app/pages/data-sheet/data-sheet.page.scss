@@ -1,0 +1,49 @@
+ion-content {
+    --background: url('../../../assets/image/blue_bg.png') 0 0/100% 100% no-repeat;
+
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        margin-top: 25px;
+        padding-top: 30px;
+        padding: 20px;
+        padding-bottom: 50px;
+        height:auto;
+        min-height: calc(100% - 80px);
+
+        ion-label{
+            margin-top: -1px;
+            color: rgb(149, 153, 153);
+        }
+        .month{
+            font-weight: bolder;
+            font-size: 15px;
+        }
+        .subject{
+            margin-left: 15px;
+            font-weight: bolder;
+        }
+        ion-item{
+            margin-top: -7px;
+        }
+        ion-badge{
+            --background: transparent;
+            --color:rgb(149, 153, 153);
+            margin-top: -28px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            line-height: 1.2;
+            font-weight: bolder;
+        }    
+
+
+    }
+
+}
+

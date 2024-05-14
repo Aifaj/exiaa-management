@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons *ngIf="showCloseButton" slot="start" (click)="close()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons *ngIf="showSaveButton" slot="end" fill="clear" color="light" class="save-button">
+      <ion-button (click)="save()" color="primary">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

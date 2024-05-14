@@ -1,0 +1,64 @@
+<ion-content>
+
+  <div class="top">
+
+    <img src="assets/icon/result/Path_50367.png" class="layout">
+    <img src="assets/icon/result/grey_circle.png" class="logo3">
+    <img src="assets/icon/result/Group.png" class="logo3">
+    <img src="assets/icon/result/circle_bg.png" class="logo3">
+    <img src="assets/icon/result/star.png" class="logo4">
+    <h1 class="percentage">85%</h1>
+    <p class="grade">GRADE A</p>
+
+
+    <img src="assets/icon/result/Group_8164.png" class="cloud1">
+    <img src="assets/icon/result/Group_8149.png" class="cloud2">
+    <img src="assets/icon/result/Group_8167.png" class="sidecloud1">
+    <img src="assets/icon/result/Group_8164.png" class="cloud3">
+    <img src="assets/icon/result/Group_8149.png" class="cloud4">
+    <img src="assets/icon/result/Group_8149.png" class="cloud5">
+    <img src="assets/icon/result/Group_8149.png" class="cloud6">
+
+    <img src="assets/icon/result/Path_50376.png" class="logo6">
+    <img src="assets/icon/result/Path_50380.png" class="logo5">
+    <img src="assets/icon/result/Path_50379.png" class="logo7">
+    <img src="assets/icon/result/Path_50378.png" class="logo8">
+    <img src="assets/icon/result/Path_50381.png" class="logo9">
+    <img src="assets/icon/result/Path_50383.png" class="logo10">
+
+  </div>
+
+
+  <div class="middleBox">
+
+    <div class="secondDiv">
+      <img src="assets/icon/result/Path_50385.png" alt="">
+    </div>
+  </div>
+
+  <div class="bottomDiv">
+    <p>You are Excellent,</p>
+    <h1>Akshay Syal !!</h1>
+
+      <ion-grid>
+        <ion-row *ngFor="let value of result">
+          <ion-col size="6">
+            {{value.subject}}
+          </ion-col>
+          <ion-col class="outof" size="3">
+            {{value.totalmarks}}
+          </ion-col>
+          <ion-col class="marks" size="3">
+            {{value.marksGot}}
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+      <div class="btn">
+        <ion-button expand="block">DOWNLOAD PDF
+         <img src="assets/icon/result/ic_pdf.png" class="iimg">
+        </ion-button>
+       </div> 
+
+  </div>
+</ion-content>

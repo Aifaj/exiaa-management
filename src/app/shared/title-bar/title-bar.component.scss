@@ -1,0 +1,24 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .back_div {
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ion-label {
+            color: #fff;
+            font-size: 22px;
+            padding-left: 20px;
+            // padding-right: 100px;
+        }
+
+    }
+
+}

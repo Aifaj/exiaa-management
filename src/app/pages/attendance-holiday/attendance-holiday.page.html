@@ -1,0 +1,134 @@
+<!-- <div class="header">
+  <ion-header>
+    <ion-toolbar>
+      <ion-segment value="Attendance">
+        <ion-segment-button value="Attendance">
+          <ion-label>Attendance</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="Holiday">
+          <ion-label>Holiday</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+</div>   -->
+
+<ion-content>
+
+  <div class="top">
+    <ion-toolbar>
+      <ion-segment value="Attendance">
+        <ion-segment-button (click)="viewattendance()" value="Attendance">
+          <ion-label>Attendance</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button (click)="viewholiday()" value="Holiday">
+          <ion-label>Holiday</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </div>
+
+  <div *ngIf="this.attendance" class="content_div">
+    <ion-row>
+
+      <ion-col size="2">
+        <ion-button fill="clear" (click)="Back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="8" class="ion-text-center">
+        <h2>{{currentMonth}}</h2>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button fill="clear" (click)="Next()">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <calendar id="mycal" [eventSource]="allEvents" [calendarMode]="calendar.mode" startHours="0"
+      noEventLabel=" There is No Events to display" endHours="23" Step="30" [currentDate]="calendar.currentDate"
+      (onTitleChanged)="onViewTitleChanged($event)" (onEventSelected)="onEventSelected($event)" [timeInterval]="30"
+    
+      >
+    </calendar>
+
+    <div class="absent">
+    <ion-list>
+      <ion-item>
+        <ion-label>Absent</ion-label>
+        <ion-badge>01</ion-badge>
+      </ion-item>
+    </ion-list>
+    </div>
+
+    <div class="Holiday">
+    <ion-list>
+      <ion-item>
+        <ion-label>Festival And Holiday</ion-label>
+        <ion-badge>01</ion-badge>
+      </ion-item>
+    </ion-list>
+    </div>
+
+  </div>
+
+  <div *ngIf="this.holiday" class="content_div">
+    
+    <ion-row>
+
+      <ion-col size="2">
+        <ion-button fill="clear" (click)="Back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="8" class="ion-text-center">
+        <h2>{{currentMonth}}</h2>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button fill="clear" (click)="Next()">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <calendar id="mycal" [eventSource]="allEvents" [calendarMode]="calendar.mode" startHours="0"
+      noEventLabel=" There is No Events to display" endHours="23" Step="30" [currentDate]="calendar.currentDate"
+      (onTitleChanged)="onViewTitleChanged($event)" (onEventSelected)="onEventSelected($event)" [timeInterval]="30"
+    
+      >
+    </calendar>
+
+
+    <div class="ListOfHoliday">
+      <h3><b> List Of Holiday </b></h3>
+      <ion-list>
+      <ion-item>
+        <ion-label>
+          <h3><b>Makar Sankranti</b></h3>
+          <p>15 Jan 2024</p>
+          <p style="text-align: end; margin-top: -20px;">Monday</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h3><b>Republic Day</b></h3>
+          <p>26 Jan 2024</p>
+          <p style="text-align: end; margin-top: -20px;">Friday</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    </div>
+
+  </div>  
+
+</ion-content>

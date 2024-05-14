@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>Add Student</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button (click)="saveData()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <div class="content_div">
+   
+    <div class="finaldiv">
+      <form class="fields-container" [formGroup]="profileForm" >
+      <ion-row>
+        <ion-col size="6">
+          <p>First Name</p>
+          <ion-item>
+            <ion-input type="text" formControlName="firstName"   type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Middle Name</p>
+          <ion-item>
+            <ion-input type="text" formControlName="middleName"  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Mother Name</p>
+          <ion-item>
+            <ion-input type="text" formControlName="motherName"   type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Last Name</p>
+          <ion-item>
+            <ion-input type="text" formControlName="lastName"   type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Registration No</p>
+          <ion-item>
+            <ion-input type="text" formControlName="generalRegisterNo"   type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Birth Place</p>
+          <ion-item>
+            <ion-input type="text" formControlName="birthPlace"   type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Nationality</p>
+          <ion-item>
+            <ion-input type="text" formControlName="nationality"   type="text"></ion-input>
+            <!-- <img slot="end" src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>                    -->
+           </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Aadhar No</p>
+          <ion-item>
+            <ion-input type="text"  formControlName="aadharNo"  type="text"></ion-input>
+            <!-- <img src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>           -->
+          </ion-item>
+        </ion-col>
+
+    
+      </ion-row>
+
+      <ion-list>
+      <ion-item>
+        <ion-select label="Gender" formControlName="gender" placeholder="Select Gender">
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Religion" formControlName="religionId" placeholder="Select religion">
+          <ion-select-option *ngFor="let religion of religions" [value]="religion.religionId">{{religion.religionName}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Category" formControlName="categoryId" placeholder="Select category">
+          <ion-select-option *ngFor="let category of categories" [value]="category.categoryId">{{category.categoryName}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Class" formControlName="classId" placeholder="Select class">
+          <ion-select-option *ngFor="let class of classes" [value]="class.classId">{{class.className}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Section" formControlName="sectionId" placeholder="Select Section">
+          <ion-select-option *ngFor="let section of sections" [value]="section.sectionId">{{section.sectionName}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select label="Academic Year" formControlName="academicYearId" placeholder="Select Acadmic Year">
+          <ion-select-option *ngFor="let year of academicYears" [value]="year.academicYearId">{{year.academicYear}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      </ion-list>
+
+      <!-- <p>Parent Mail ID</p>
+      <ion-item>
+        <ion-input type="text"  formControlName="parentMailId"   type="text"></ion-input>
+      </ion-item>
+
+      <p>Mother Name</p>
+      <ion-item>
+        <ion-input type="text"  formControlName="motherName"  type="text"></ion-input>
+      </ion-item>
+
+      <p>Father Name</p>
+      <ion-item>
+        <ion-input type="text"   formControlName="fatherName"   type="text"></ion-input>
+      </ion-item>
+
+      <p>Parmanent Add.</p>
+      <ion-item>
+        <ion-input type="text"   formControlName="parmanentAdd"  type="text"></ion-input>
+      </ion-item>
+
+      <p>Local Add.</p>
+      <ion-item>
+        <ion-input type="text"   formControlName="localAdd"  type="text"></ion-input>
+      </ion-item> -->
+
+     
+    </form>
+
+    </div>
+    
+  </div>
+
+ 
+
+</ion-content>

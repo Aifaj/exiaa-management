@@ -1,0 +1,79 @@
+<ion-content>
+
+  <!-- <div class="top">
+    <div class="back_div">
+      <ion-icon class="back_btn" name="chevron-back-outline" color="light"></ion-icon>
+      <ion-label>My Profile</ion-label>
+    </div>
+    <div class="skip">
+      <ion-button>Skip</ion-button>
+    </div>
+  </div> -->
+
+  <div class="top">
+  <app-title-bar></app-title-bar>
+
+  <div class="timer">
+    <div class="progress">
+      <div class="progress-bar"></div>
+      <span class="progress-text">18 sec</span>
+      <span class="progress-icons"><ion-icon slot="end" name="time-outline"></ion-icon></span>
+      
+    </div>
+  </div>
+
+
+  <ion-item lines="none">
+    <ion-label>Question <span class="current">1/</span>
+      <span class="total">50</span></ion-label>
+    
+    <ion-button slot="end">
+      <img src="../../../../assets/icon/ic_quesion.png" class="custom-icon-clean-image"/>                   
+      <!-- <ion-icon name="star" slot="start"></ion-icon> -->
+      <ion-badge>256</ion-badge>
+    </ion-button>
+  </ion-item>
+  
+  <hr>
+
+  <ion-card>
+  <div class="quiz">
+    <div class="question-wrapper">
+      <div class="question">The syntax used to create a module in AngularJS is:</div>
+    </div>
+
+    <div class="answer-wrapper">
+      <div class="answer">
+        <span class="text">A. aaaaa</span>
+        <span class="checkbox">
+          <span class="icon">/</span>
+        </span>
+      </div>
+
+      <div class="answer">
+        <span class="text">B. bbbbb</span>
+        <span class="checkbox">
+          <span class="icon">/</span>
+        </span>
+      </div>
+
+      <div class="answer correct">
+        <span class="text">C. ccccc</span>
+        <span class="checkbox">
+          <span class="icon">/</span>
+        </span>
+      </div>
+
+      <div class="answer">
+        <span class="text">D. dddd</span>
+        <span class="checkbox">
+          <span class="icon">/</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  </ion-card>
+
+</div>
+</ion-content>

@@ -1,0 +1,62 @@
+ion-content {
+    --background: url('../../../assets/image/blue_bg.png') 0 0/100% 100% no-repeat;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .back_div {
+            font-size: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ion-label {
+                color: #fff;
+                font-size: 22px;
+                padding-left: 20px;
+                // padding-right: 100px;
+            }
+
+        }
+
+    }
+
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        margin-top: 25px;
+        padding-top: 30px;
+        padding: 20px;
+        padding-bottom: 50px;
+        height:auto;
+        min-height: calc(100% - 80px);
+
+        ion-list{
+            margin-bottom: 30px;
+            
+            ion-button{
+                --background: transparent;
+            }
+        }
+
+        ion-button{
+            //margin-top: 60px;
+            --background: #4e61d1;
+        }
+
+        // p{
+        //     margin-left: 18px;
+        //     margin-bottom: -1px;       
+        //  }
+        
+    }
+
+}
+

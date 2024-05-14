@@ -1,0 +1,7 @@
+{
+  "name": "exiaa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,56 @@
+<ion-content>
+  <div id="sign-in-button"></div>
+  <div class="top">
+
+    <img src="assets/icon/Group_8035.png" class="layout">
+    <div class="inner">
+      <img src="assets/icon/Group_8034.png" class="layout">
+    </div>
+    <img src="assets/icon/Group_8031.png" class="logo1">
+    <img src="assets/icon/Path_44106.png" class="logo2">
+    <img src="assets/icon/Group_8026.png" class="logo3">
+    <img src="assets/icon/Group_8026.png" class="logo4">
+    <img src="assets/icon/Group_8024.png" class="logo5">
+
+  </div>
+
+  <div class="login-wrapper">
+    <div class="logo">
+      <ion-img src="assets/icon/exiaa_logo.png"></ion-img>
+    </div>
+    <div class="form_container" *ngIf="!showOTPInput">
+      <ion-label class="label">Mobile Number</ion-label>
+      <ion-item lines="none">
+        <div class="dropdown-container" (click)="countrySelect()" expand="block">
+          <ion-label class="label-inner">{{countryCode}}</ion-label>
+          <img src="../../../assets/flags/{{flag}}.svg" class="icon" />
+          <ion-icon name="caret-down-outline" class="icon-down"></ion-icon>
+        </div>
+        <ion-input type="tel" placeholder="Enter Mobile Number" [(ngModel)]="mobileNo"
+          (ngModelChange)="checkMobileNumber()" autocomplete="off" class="primary-input" maxlength="10"></ion-input>
+      </ion-item>
+      <ion-button [disabled]="loginDisabled" expand="block" (click)="signinWithPhoneNumber()">GET OTP</ion-button>
+      <div class="agreement">
+        <p>By Continuing, you agree to Exiaa's</p>
+        <p>
+          <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+    <div class="otp_container" *ngIf="showOTPInput">
+      <ion-label class="label">OTP</ion-label>
+      <ion-item lines="none">
+        <ion-input type="tel" placeholder="Enter OTP" [(ngModel)]="otp" (ngModelChange)="checkOtp()" autocomplete="off"
+          class="primary-input" maxlength="6"></ion-input>
+      </ion-item>
+      <ion-button [disabled]="otpDisabled" expand="block" (click)="fireOtpVerification()">VERIFY OTP</ion-button>
+      <!-- <div class="agreement">
+              <p>By registering you agree to our</p>
+              <p>
+                <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+              </p>
+            </div> -->
+    </div>
+
+  </div>
+</ion-content>

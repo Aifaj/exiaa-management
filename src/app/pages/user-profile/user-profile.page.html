@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button >Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div (click)="changeImage('photo')" class="cover-image" [style.backgroundImage]="user?.coverImageUrl ? 'url(' + user?.coverImageUrl + ')' : 'url(assets/image/cover_image.jpg)'">
+
+  </div>
+
+  <div class="top">
+
+   
+  
+
+
+  </div>
+
+  <div class="middleBox">
+    <div class="firstDiv" (click)="changeImage('photo')">
+      <!-- <img src="assets/icon/ic_attendance (1).png" alt=""> -->
+      <img alt="User Avatar" [src]="photoUrl ? photoUrl : 'assets/icon/ic_attendance (1).png'" />
+
+      <!-- <ion-avatar >
+        <img alt="User Avatar" [src]="photoUrl ? photoUrl : 'assets/images/avatar.png'" />
+        <ion-icon name="camera" class="icon"></ion-icon>
+      </ion-avatar> -->
+    </div>
+  </div>  
+
+  <div class="bottomDiv">
+      <div class="finaldiv">
+        <form class="fields-container"  >
+        <ion-row>
+          <ion-col size="6">
+            <p>Display Name</p>
+            <ion-item>
+              <ion-input type="text"   value="2426 323 433"  type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+  
+          <ion-col size="6">
+            <p>Email Id</p>
+            <ion-item>
+              <ion-input type="text"  value="2023-2024"  type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+  
+          <ion-col size="6">
+            <p>Location</p>
+            <ion-item>
+              <ion-input type="text" value="VI"    type="text"></ion-input>
+              <!-- <img slot="end" src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>                    -->
+             </ion-item>
+          </ion-col>
+  
+          <ion-col size="6">
+            <p>Gender</p>
+            <ion-item>
+              <ion-input type="text" value="T001233"  type="text"></ion-input>
+              <!-- <img src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>           -->
+            </ion-item>
+          </ion-col>
+  
+          <ion-col size="6">
+            <p>Date of Birth</p>
+            <ion-item>
+              <ion-input type="text" value="22 aug 2023"   type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size="6">
+            <p>About Us</p>
+            <ion-item>
+              <ion-input type="text" value="22 aug 2023"   type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+  
+      </form>
+  
+ 
+    </div>  
+
+  </div> 
+
+  
+</ion-content> 

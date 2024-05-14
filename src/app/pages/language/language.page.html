@@ -1,0 +1,73 @@
+
+<ion-content [fullscreen]="true">
+
+  
+  <div class="bottomDiv" *ngIf="isLanguageSelected">
+
+    <div class="heding">
+      <h1 class="english">Choose Language</h1>
+      <h1 class="hindi"> भाषा चुनें </h1>
+    </div> 
+
+    <!-- <div class="gridDiv">
+      <div class="box" *ngFor="let item of menu">
+        <p class="title">{{item.title}}</p>
+        <img src="assets/dashicon/{{item.image}}.png" alt="">
+      </div>
+    </div>   -->
+
+    <div class="gridDiv">
+
+      <div class="box hindi" (click)="select()">
+        <p class="title">Hindi</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      <div class="box english">
+        <p class="title">English</p>
+        <img src="assets/dashicon/ic_quiz.png" alt="">
+      </div>
+
+      <div class="box marathi">
+        <p class="title">मराठी</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      <div class="box urdu">
+        <p class="title">اردو</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      <div class="box bengali">
+        <p class="title">বাংলা</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      <div class="box gujrati">
+        <p class="title">ગુજરાતી</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      
+      <div class="box tamil">
+        <p class="title">తెలుగు</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+
+      
+      <div class="box arebic">
+        <p class="title">عربي</p>
+        <img src="assets/dashicon/ic_assignment.png" alt="">
+      </div>
+      
+    </div>  
+
+  </div> 
+
+  <div class="onselect" *ngIf="!isLanguageSelected">
+    <h1 class="greding">Namaste,</h1>
+    <h1 class="start">Let's get started.</h1>
+    <p>Login using your mobile number to continue</p>
+  </div>
+
+</ion-content>

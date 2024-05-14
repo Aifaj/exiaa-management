@@ -1,0 +1,126 @@
+// @import "src/theme/mixins";
+ion-header {
+    // --background: #ff0000;
+    // background-color: #ff0000;
+    // background: #ff0000;
+   
+    ion-toolbar{
+        --border-width: 0px !important;
+        --background:  #006c6b;
+        ion-buttons{
+            ion-icon {
+                color: var(--ion-color-light);
+                font-size: 25px;
+            }
+
+            ion-button{
+              --color:#fff;
+              //background-color: #ff0000;
+              border: 2px solid #969393;
+              border-radius: 12px;
+              --padding:0px !important;
+            }
+            
+            
+          }
+          ion-title{
+            --color: #fff;
+          }
+        
+
+    }
+}
+
+ion-content {
+    ion-toolbar{
+        ion-buttons{
+            ion-icon{
+                font-size: x-large;
+            }
+        }
+    }
+
+    ion-grid {
+
+        ion-row {
+            height: 100%;
+
+            ion-col {
+                height: 100%;
+                position: relative;
+
+                .error-message {
+                  color: #f90505;
+                  // margin-top: -7px;
+                  // margin-bottom: 10px;
+                  margin-left: 20px;
+                }
+
+                ion-item::part(native) {
+                  background: #e6e8e8;
+                  color: #000000;
+                
+                  border-color: #969393;
+                  //border-style: dashed;
+                  border-width: 1px;
+                  width: 90%;
+                  border-radius: 20px;
+                  margin-left: 14px;
+                  margin-top: 14px;
+                  margin-bottom: 8px;
+                }
+                
+                ion-item::part(detail-icon) {
+                  color: white;
+                  opacity: 1;
+                  font-size: 20px;
+                }
+
+                .fields-container {
+                    max-width: 400px; /* Adjust the maximum width as needed */
+                    margin: auto;
+                  }
+                  
+                  .inner-inputs {
+                    // ion-label {
+                    //   font-weight: bold;
+                    //   margin-bottom: 15px;
+                    // }
+                  
+                    .input-field {
+                      margin-top: 10px;
+                     // margin-bottom: 50px; /* Adjust the spacing between input fields */
+                    }
+                  
+                    // ion-select {
+                    //   width: 100%;
+                    //   border: 1px solid #ccc;
+                    //   border-radius: 5px;
+                    //   padding: 5px;
+                    //   margin-bottom: 10px;
+                    // }
+                  
+                    // ion-input {
+                    //   width: 100%;
+                    //   border: 1px solid #ccc;
+                    //   border-radius: 5px;
+                    //   padding: 3px;
+                    
+                    // }
+                  
+                    // ion-label {
+                    //   &.ion-margin-bottom {
+                    //     margin-bottom: 10px; /* Adjust the spacing for labels with ion-margin-bottom class */
+                    //   }
+                    // }
+                  
+                    .error-message {
+                      color: #ff0000;
+                      font-size: 12px;
+                    }
+                  }
+            }
+        }
+
+    }
+}

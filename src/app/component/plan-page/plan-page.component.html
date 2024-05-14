@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title >Select Plan</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button  [disabled]="!selectedPlan" (click)="saveData()"  color="primary">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+          <ion-list class="ion-padding" >
+              <div class="rounded-box" *ngFor="let plan of plans">
+                <div class="header" >
+                   <ion-checkbox  (click)="selectPlan(plan)" [(ngModel)]="isSelected"  >
+                      <ion-label>{{ plan.planName }}</ion-label>
+                   </ion-checkbox>
+                      <!-- <h1>{{plan.price}} </h1>
+                      <p>{{plan.validity}}  </p>
+                      <span>Free</span> -->
+                      <h1>{{ plan.price ? plan.price : '' }}</h1>
+                      <p>{{  plan.validity ? plan.validity : '' }}</p>
+                      <span *ngIf="!plan.price && !plan.validity">FREE</span>
+
+                    <div [innerHTML]="sanitizeDescription(plan.description)" class="description-content"></div>
+                    
+                </div> 
+                    
+              </div>  
+          </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

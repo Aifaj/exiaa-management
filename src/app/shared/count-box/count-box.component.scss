@@ -1,0 +1,28 @@
+.count-box{
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #2807ff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+
+    img{
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+    }
+
+    p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    h6{
+        margin-top: -20px;
+        color: #b5adad;
+    }
+}

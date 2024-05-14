@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{isEditMode==true ? 'Edit Contact' : 'Add Content'}}</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button (click)="saveData()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <form class="fields-container" [formGroup]="userForm">
+
+          <ion-list lines="none">
+            <ion-list-header>Institute</ion-list-header>
+          <ion-item>
+            <ion-select formControlName="instituteId" placeholder="Select Youar Institute">
+              <ion-select-option *ngFor="let institute of allInstitute" [value]="institute.instituteId">{{institute.instituteName}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-message" *ngIf="this.userForm.controls['instituteId'].touched && this.userForm.controls['instituteId'].invalid">
+            <span *ngIf="this.userForm.controls['instituteId'].hasError('required')">Institute is required</span>
+          </div>
+          </ion-list>
+
+          <ion-list lines="none">
+            <ion-list-header>Acadmic Year</ion-list-header>
+          <ion-item>
+            <ion-select formControlName="academicYearId" placeholder="Select Acadmic Year">
+              <ion-select-option *ngFor="let year of acadmicYears" [value]="year.academicYearId">{{year.academicYear}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-message" *ngIf="this.userForm.controls['academicYearId'].touched && this.userForm.controls['academicYearId'].invalid">
+            <span *ngIf="this.userForm.controls['academicYearId'].hasError('required')">Academic Year is required</span>
+          </div>
+          </ion-list>
+          
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

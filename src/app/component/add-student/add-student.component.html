@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{isEditMode==true ? 'Edit Contact' : 'Add Content'}}</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button (click)="saveData()" (click)="openAddStudentInstitute()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <form class="fields-container" [formGroup]="userForm">
+
+          <ion-list lines="none">
+            <ion-list-header>Display Name</ion-list-header>
+            <ion-item class="input-field" >
+              <ion-input type="text" formControlName="displayName"  placeholder="Enter Name"></ion-input>
+            </ion-item>
+            <div class="error-message" *ngIf="this.userForm.controls['displayName'].touched && this.userForm.controls['displayName'].invalid">
+              <span *ngIf="this.userForm.controls['displayName'].hasError('required')">Display Name is required</span>
+            </div>  
+          </ion-list>
+
+          <ion-list lines="none">
+            <ion-list-header>Gender</ion-list-header>
+          <ion-item>
+            <ion-select label="Gender" formControlName="gender" placeholder="Select Gender">
+              <ion-select-option value="male">Male</ion-select-option>
+              <ion-select-option value="female">Female</ion-select-option>
+              <ion-select-option value="other">Other</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-message" *ngIf="this.userForm.controls['gender'].touched && this.userForm.controls['gender'].invalid">
+            <span *ngIf="this.userForm.controls['gender'].hasError('required')">Gender is required</span>
+          </div>  
+          </ion-list>
+
+          <ion-list lines="none">
+            <ion-list-header>I am</ion-list-header>
+          <ion-item>
+            <ion-select formControlName="userTypeId" placeholder="Select User Type">
+              <ion-select-option *ngFor="let usertype of userTypes" [value]="usertype.userTypeId">{{usertype.userRole}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-message" *ngIf="this.userForm.controls['userTypeId'].touched && this.userForm.controls['userTypeId'].invalid">
+            <span *ngIf="this.userForm.controls['userTypeId'].hasError('required')">Role is required</span>
+          </div>
+          </ion-list>
+
+          <ion-list lines="none">
+            <ion-list-header>Date Of Birth</ion-list-header>
+          <ion-item>
+            <ion-input formControlName="dateOfBirth" type="date" placeholder="Enter Date of Birth"></ion-input>
+          </ion-item>
+          </ion-list>
+
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

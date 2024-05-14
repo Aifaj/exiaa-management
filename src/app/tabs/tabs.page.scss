@@ -1,0 +1,48 @@
+ion-tabs{
+    
+    .tab-selected{
+        ion-icon, ion-label {
+            color: var(--ion-color-primary-contrast) !important;
+        }
+    }
+	ion-fab {
+		margin-bottom: env(safe-area-inset-bottom); /* fix notch ios*/
+        margin-bottom: 10px;
+		ion-fab-button {
+			--box-shadow: none;
+		}
+	}
+	ion-tab-bar {
+        --border: 0;
+	    --background: transparent;
+		margin: 10px;
+        border-radius: 10px;
+        &:after{
+			content: " ";
+			width: 100%;
+			bottom: 0;
+			background: var(--ion-color-primary-contrast);
+			height: env(safe-area-inset-bottom);
+			position: absolute;
+		}
+        ion-tab-button {
+            background-color: var(--ion-color-primary);
+            color: var(--ion-color-primary-contrast);
+        }
+		ion-tab-button.tab2 {
+			border-top-right-radius: 20px;
+            color: var(--ion-color-primary-contrast);
+		}
+		ion-tab-button.tab3 {
+            border-top-left-radius: 20px;
+            color: var(--ion-color-primary-contrast);
+		}
+		svg {    
+			width: 72px;
+			margin-top: 19px;
+			path{
+				fill:  var(--ion-color-primary);
+			}		
+		}
+	}
+}

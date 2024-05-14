@@ -1,0 +1,23 @@
+<app-loader></app-loader>
+<ion-content>
+  <app-student-info></app-student-info>
+  <div class="count-grid">
+    <app-count-box></app-count-box>
+    <app-count-box></app-count-box>
+  </div>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-button color="dark" (click)="addCard(false)">
+        Select Mode <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-fab>
+  
+  <div class="menu-icon-view">
+    <div class="icon-grid">
+      <app-icon-view *ngFor="let icon of menu"></app-icon-view>
+    </div>
+
+    <ion-button (click)="performLogout()">Logout</ion-button>
+    
+  </div>
+</ion-content>

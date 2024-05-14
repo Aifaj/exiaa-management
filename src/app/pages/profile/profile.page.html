@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end" fill="clear" color="light" class="save-button">
+      <ion-button (click)="saveData()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <div (click)="changeImage('photo')" class="cover-image" [style.backgroundImage]="user?.coverImageUrl ? 'url(' + user?.coverImageUrl + ')' : 'url(assets/image/cover_image.jpg)'">
+
+  </div>
+
+  <!-- <div class="doneBtn">
+    <ion-button (click)="saveData()" size="small">
+      <ion-icon name="checkmark-outline"></ion-icon>
+      Done</ion-button>
+  </div> -->
+
+  <div class="content_div">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list>
+            <ion-item>
+              <ion-thumbnail (click)="changeImage('photo')" slot="start"><img src="assets/icon/dp_bg.png"></ion-thumbnail>
+              <ion-label>
+                <h2><b>Junior Taylor</b>
+                  <span style="float: right;">
+                    <ion-icon name="camera-outline"></ion-icon>
+                  </span>
+                </h2>
+                <p id="rate">Class XI-A | Roll No : 004</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="finaldiv">
+      <form class="fields-container" [formGroup]="profileForm" >
+      <ion-row>
+        <ion-col size="6">
+          <p>Adhar No</p>
+          <ion-item>
+            <ion-input type="text" formControlName="adharNo"  value="2426 323 433"  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Academic Year</p>
+          <ion-item>
+            <ion-input type="text" formControlName="acadmicYear"  value="2023-2024"  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Admission Class</p>
+          <ion-item>
+            <ion-input type="text" value="VI" formControlName="admissionClass"   type="text"></ion-input>
+            <!-- <img slot="end" src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>                    -->
+           </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Old Admission No</p>
+          <ion-item>
+            <ion-input type="text" value="T001233" formControlName="oldAdmissionNo"  type="text"></ion-input>
+            <!-- <img src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>           -->
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Date of Admission</p>
+          <ion-item>
+            <ion-input type="text" value="10 Apr 2023" formControlName="dateOfAdmission"   type="text"></ion-input>
+            <!-- <img src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>  -->
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <p>Date of Birth</p>
+          <ion-item>
+            <ion-input type="text" value="22 aug 2023" formControlName="dateOfBirth"  type="text"></ion-input>
+            <!-- <img src="../../../../assets/icon/ic_lock.png" class="custom-icon-clean-image"/>   -->
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <p>Parent Mail ID</p>
+      <ion-item>
+        <ion-input type="text" value="abcdefg.&#64;gmail.com" formControlName="parentMailId"   type="text"></ion-input>
+      </ion-item>
+
+      <p>Mother Name</p>
+      <ion-item>
+        <ion-input type="text" value="Sara Taylor"  formControlName="motherName"  type="text"></ion-input>
+      </ion-item>
+
+      <p>Father Name</p>
+      <ion-item>
+        <ion-input type="text" value="Ross Taylor"  formControlName="fatherName"   type="text"></ion-input>
+      </ion-item>
+
+      <p>Parmanent Add.</p>
+      <ion-item>
+        <ion-input type="text" value="Nagpur Maharastra"  formControlName="parmanentAdd"  type="text"></ion-input>
+      </ion-item>
+
+      <p>Local Add.</p>
+      <ion-item>
+        <ion-input type="text" value="Nagpur Maharastra"  formControlName="localAdd"  type="text"></ion-input>
+      </ion-item>
+
+    </form>
+
+    </div>
+    
+  </div>
+
+</ion-content>

@@ -1,0 +1,47 @@
+// @import "src/theme/mixins";
+ion-header {
+    --background: #ff0000;
+    background-color: #ff0000;
+    background: #ff0000;
+   
+    ion-toolbar{
+        --border-width: 0px !important;
+        --background: #2d05f6;
+        ion-buttons{
+            ion-icon {
+                color: var(--ion-color-light);
+                font-size: 25px;
+            }
+
+            ion-button{
+              --color:#fff;
+              background-color: #ff0000;
+              border-radius: 7px;
+              --padding:0px !important;
+            }
+            
+            
+          }
+          ion-title{
+            --color: #fff;
+          }
+        
+
+    }
+}
+
+ion-content{
+    --background: var(--ion-color-primary);
+
+ion-card{
+    box-shadow: 0 0 5px red, 0 0 25px #f6ffff;
+    color: #ff8a07;
+    background: black;
+
+    ion-card-title{
+        color: #ff8a07;
+        font-style: italic;
+
+    }
+}
+}

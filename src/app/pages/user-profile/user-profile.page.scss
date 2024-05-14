@@ -1,0 +1,111 @@
+ion-header {
+    // --background: #ff0000;
+    // background-color: #ff0000;
+    // background: #ff0000;
+   
+    ion-toolbar{
+        --border-width: 0px !important;
+        --background:  #006c6b;
+        ion-buttons{
+            ion-icon {
+                color: var(--ion-color-light);
+                font-size: 25px;
+            }
+
+            ion-button{
+              --color:#fff;
+              //background-color: #ff0000;
+              border: 2px solid #969393;
+              border-radius: 12px;
+              --padding:0px !important;
+            }
+            
+            
+          }
+          ion-title{
+            --color: #fff;
+          }
+        
+
+    }
+}
+
+ion-content {
+   // --background: #5c1d1d;
+    --background: url('../../../assets/image/blue_bg.png') 0 0/100% 100% no-repeat;
+
+    .top{
+       // margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+    .middleBox{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+    
+        .firstDiv{
+            height: 25svh;
+            background-color: #fff;
+            width: 50%;
+            border-radius:100px;
+            border: 5px solid #2807ff;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+    
+            img{
+                width: 100%;
+                //height: 60px;
+                //margin-top: 10px;
+            }
+    
+        }
+    
+    
+    }
+    
+    .bottomDiv{
+        height:100%;
+        background-color: #fff;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        margin-top: -70px;
+        padding-top:90px;
+        padding-bottom: 20px;
+
+    
+            .finaldiv{
+                p{
+                    margin-top: 10px;
+                    margin-left: 17px;
+                    color: #d4d4d4;
+                    font-size: small;
+                }
+    
+                ion-label{
+                    font-weight: bold;
+                  //  margin-top: -5px;
+                }
+                ion-input{
+                    font-weight: bold;
+                }
+               
+            }
+            
+        }
+    }
+    
+    

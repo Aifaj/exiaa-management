@@ -1,0 +1,32 @@
+ion-content {
+    --background: url('../../../assets/image/blue_bg.png') 0 0/100% 100% no-repeat;
+
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        margin-top: 25px;
+        padding-top: 30px;
+        padding: 20px;
+        padding-bottom: 50px;
+        height:auto;
+        min-height: calc(100% - 80px);
+
+        p{
+            margin-bottom: -10px;
+            color: rgb(182, 185, 188);
+        }
+
+        ion-button{
+            max-width: 90%;
+            margin-left: 20px;
+            margin-top: 30px;
+            --background: #4e61d1;
+           
+        }
+
+    }
+
+}
+

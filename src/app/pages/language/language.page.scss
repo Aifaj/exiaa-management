@@ -1,0 +1,102 @@
+ion-content {
+
+.heding{
+    .english{
+        margin-top: 30px;
+        margin-left: 20px;
+        font-weight:bolder;
+    }
+    .hindi{
+        margin-left: 20px;
+        font-weight:bolder;
+        margin-bottom: 20px;
+    }
+}    
+
+.bottomDiv{
+     height: auto;
+    // background-color: #fff;
+    // border-top-left-radius: 25px;
+    // border-top-right-radius: 25px;
+    // margin-top: -70px;
+    // padding-top: 120px;
+    // padding-bottom: 20px;
+
+    .gridDiv{
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-gap: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .box{
+           // background-color: #f5f6fc;
+            border-radius: 15px;
+            height: 120px;
+           // padding: 20px;
+
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                // max-width: 50%;
+                // height: 50%;
+                // background-color: #a3ea7c;
+                // opacity: 0.6;
+                //background-color: transparent;
+            }
+
+            p{
+                color: #020202;
+                text-align: left;
+                margin-left: 10px; 
+            }
+        }
+        .english{
+            background-color: #c5eeb1;
+           
+        }
+
+        .hindi{
+            background-color: #c2cbff;
+        }
+        .marathi{
+            background-color: #a3ea7c;
+        }
+        .urdu{
+            background-color: #d0968c;
+        }
+        .bengali{
+            background-color: #ddc882;
+        }
+        .gujrati{
+            background-color: #b6d7d6;
+        }
+        .tamil{
+            background-color: #846262;
+        }
+        .arebic{
+            background-color: #c893d8;
+        }
+    }
+}
+
+.onselect{
+   .greding{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight:bolder;
+   }
+   .start{
+    margin-left: 20px;
+    font-weight:bolder;
+    margin-top: -1px;
+   }
+
+   p{
+    margin-left: 20px;
+    color: #a6acac;
+   }
+}
+
+}
