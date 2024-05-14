@@ -88,7 +88,7 @@ export class HomePage implements OnInit {
     console.log(this.user);
     console.log(this.user.displayName);
 
-   // this.openAddStudent();
+   this.openAddStudent();
     //this.openAddStudentInstitute();
 
 

@@ -186,10 +186,10 @@ export class UserService {
   }
 
   public async getUserById(userId: any): Promise<any> {
-    this.loaderService.simpleLoader();
+    //this.loaderService.simpleLoader();
     try {
       const res = await this.restService.get(String.Format(UserService.NodeGetUserById, userId));
-      this.loaderService.dismissLoader();
+     // this.loaderService.dismissLoader();
       return Promise.resolve(res.data);
     } catch (e) {
       this.loaderService.dismissLoader();
@@ -199,10 +199,10 @@ export class UserService {
   }
 
   public async getAllUserType(): Promise<any> {
-    this.loaderService.simpleLoader();
+    //this.loaderService.simpleLoader();
     try {
       const res = await this.restService.get(UserService.NodeGetAllUserType);
-      this.loaderService.dismissLoader();
+     // this.loaderService.dismissLoader();
       return Promise.resolve(res);
     } catch (e) {
       this.loaderService.dismissLoader();

@@ -22,7 +22,7 @@ export class TabsPage implements OnInit {
   async ngOnInit() {
     this.user = this.userService.getUser();
     if(this.user.userTypeId == 0){
-      await this.openModalName();
+      //await this.openModalName();
     }else{
       this.user = null;
     }
